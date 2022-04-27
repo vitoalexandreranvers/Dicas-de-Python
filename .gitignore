@@ -1,0 +1,130 @@
+
+                                                                   •	PRIMEIRO PROGRAMA
+print(" hello, ao mundo da programação Python !!")
+
+                                                                   •	NÚMEROS
+- números em python
+Nesta seção aprenderemos sobre os números em python e sobre como usa-los. E também faremos uma breve introdução a variáveis.
+TIPOS DE NUMEROS
+	Python tem vários “tipos” de números (literais numéricos). Nós nos concentramos principalmente em números inteiros (int) e números de ponto flutuante (float).
+	Inteiros são apenas números inteiros, positivos ou negativos. Por exemplo 2 e -2 são exemplos de números inteiros.
+	Os números de ponto flutuantes em python são notáveis porque eles tem um ponto decimal neles, ou usam exponencial (e) para definir o numero. Por exemplo, 2.0 e -2.1 são exemplos de números de ponto flutuante. 4E2 (4 vezes 10 elevado a 2) também é um exemplo de um numero de ponto flutuante em python.
+	Aqui está alguns exemplos dos dois tipos principais:
+1, 2 , -5, 1000 inteiros ou int
+1.2, -0.5, 2e2, 3E2 numero ponto-flutuante ou float
+
+Agora vamos começar com algumas aritméticas básicas.
+
+# Soma
+2 + 1
+#tela
+3
+
+#subtração
+2 – 1
+#tela
+1
+
+
+
+
+#multiplicação
+2 * 2
+# tela
+4
+
+#divisão, divisões sempre retornam um float
+3 / 2
+#tela
+1.5
+
+#você também pode especificar o tipo de número
+3.0 /2 
+#tela
+1.5
+
+#funciona também para os outros
+3 / 2.0
+
+#quadrado
+ 3**2
+#tela
+9
+
+#raiz quadrada
+4 ** 0.5
+#tela
+2.0
+
+#modulo, resto da divisão
+10 % 3
+#tela
+1
+
+#A ordem das operações em python é igual na matemática normal
+2 + 10 * 10 + 3
+#tela
+105
+
+#voce pode usar parêntesis para especificar a ordem
+(2+10) * (10+3)
+#tela
+156
+
+Atribuiçoes de variáveis
+	Agora que vimos como usar números em python como calculadora, vejamos como podemos atribuir nomes e criar variáveis. Usamos um único sinal de igual para atribuir rótulos ás variáveis. Vejamos alguns exemplos de como podemos fazer isso.
+
+# vamos criar um objeto chamado “a” e atribuir o numero 5
+
+Agora, se eu chamar “a” no meu script python, o python tratará isso como o numero 5
+
+# Somando objetos
+ a + a
+#
+Tela
+10
+
+O que acontece na redefinição? Python nos deixa escrever sobre os valores anteriores?
+#redefinição
+a = 20
+#checar
+a
+#tela
+20
+
+# usar a para redefinir a 
+a = a + a 
+#checar
+a 
+#tela
+40
+
+Os nomes que você usa ao criar esses rótulos precisam seguir algumas regras:
+1 – os nomes não podem começar com um numero.
+2 – não pode haver espaços no nome. Use “_” em vez de espaço
+3 – não é possível usar nenhum desses símbolos “ <> / ?|()!@#$%^&*~-+”
+4 – é considerada a melhor prática (PEP8) que os nomes são minúsculos 
+
+Usar nomes específicos para as variáveis pode ser uma maneira muito útil de acompanhar diferentes variáveis em python. Por exemplo:
+
+distancia = 100
+
+tempo = 20
+
+velocidade = distancia / tempo
+
+#mostra velocidade
+print(velocidade)
+
+#tela
+5
+
+Use nomes de objetos para manter uma melhor relação com o que está acontecendo no seu código!
+Então, oque aprendemos? Aprendemos alguns dos conceitos básicos dos números em python. Também aprendemos a fazer aritmética e usar python como uma calculadora básica. Em seguida, o envolvemos com o aprendizado sobre a atribuição e variável em python.
+
+EXERCICIOS :
+1 – QUANTO é 7 elevado na potencia 4?
+R: 2041
+2 – quanto é 21424 dividido por 89?
+R: 240.7191011235955
+
