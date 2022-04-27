@@ -1,0 +1,80 @@
+  •                                                                   	FORMATAÇÃO DE IMPRESSÃO       
+
+- Nesta seção, abordaremos brevemente as várias maneiras de formatar suas declarações impressas. À medida que você codifica mais e mais, você provavelmente deseja ter declarações de impressão que possam incluir uma variável em uma declaração de string impressa.
+
+O exemplo mais básico de uma declaração de impressão é:
+Print(“this is a string”)
+This is a string
+
+ - strings
+	Você pode usar o %s para formatar strings em suas instruções de impressão.
+S = “STRING”
+Print( “place another string with a mod and s: %s” %(s))
+
+- números de ponto flutuante
+	Os números de ponto flutuante usam o formato %n1.n2f onde o n1 é o numero mínimo total de dígitos que a cadeia deve conter ( estes podem ser preenchidos com espaço em branco se o numero inteiro não tiver esses muitos dígitos. O espaço reservado n2 significa quantos números para mostrar após o ponto decimal. Vamos ver alguns exemplos:
+
+Print(“Floating point numbers: %1.2f” %(13.144))
+Floating point numbers: 13.14
+
+Print(“Floating point numbers: %1.0f” %(13.144))
+Floating point numbers: 13
+
+Print(“Floating point numbers: %1.5f” %(13.144))
+Floating point numbers: 13.14400
+
+Print(“Floating point numbers: %1.2f” %(13.144))
+Floating point numbers: 13.14
+
+Print(“Floating point numbers: %10.2f” %(13.144))
+Floating point numbers:          13.14
+
+Print(“Floating point numbers: %25.2f” %(13.144))
+Floating point numbers:                         13.14
+
+
+- métodos de formato de conversão
+	Deve notar-se que os dois métodos %s e o %r realmente convertem quase qualquer objeto python em uma string usando dois métodos separados: str() e repr()
+
+Print (“here is a number : %s. here is a string: %s” %(123.1 , “hi”))
+here is a number : 123.1. here is a string: hi
+
+Print (“here is a number : %r. here is a string: %r” %(123.1 , “hi”))
+here is a number : 123.1. here is a string: 'hi’ 
+
+
+
+
+
+
+- formatação multipla
+	Passe uma tupla para junto com o símbolo do módulo para colocar vários formatos na suas declarações de impressão
+
+Print (“first: %s, second: %1.2f, third: %r” %(“hi” , 3.14,22))
+Firt : hi !, second: 3.14, third: 22
+
+- usando o método string.format()
+	A melhor maneira de formatar objetos em suas strings para instruções de impressão é usar o método format(). A sintaxe é:
+
+“string aqui {var1} e também {var2}: format(var1 = “alguma coisa 1”, var2 = “alguma coisa 2”)
+
+Vamos ver alguns exemplos:
+
+Print (“this is a string with na {p}” .format(p=”insert”))
+This is a string with na insert
+
+Print(“one: {p}, two: {p}, three: {p}” .format(p=”hi”))
+One: hi! , two: hi!, three: hi!
+
+Print(“objeto 1: {a}, objeto 2:{b}, objeto3 {c}” .format(a=1, b=”two”, c=12.3))
+Objeto 1: 1, objeto2: two, objeto3: 12.3
+
+Esse é o básico da formatação de sequencia de caracteres!!
+
+Exercícios:
+1 – dadas as variáveis:
+Planeta = “terra”
+Diâmetro = 12742
+
+Use format() para printar a seguinte frase:
+O diâmetro da terra é de 12742 quilômetros.
