@@ -1,0 +1,148 @@
+                                                               •	STRINGS PARTE 1
+
+- Strings
+	As strings são usadas em python para registrar informações de texto, como nomes ou frases. As strings em python são na verdade uma sequência, o que basicamente significa que o python acompanha cada elemento da strings como uma sequencia de caracteres. Por exemplo, python entende a string “hello” como uma sequencia de letras em uma ordem especifica. Isso significa que podemos usar a indexação para pegar letras particulares (como a primeira letra ou a ultima letra).
+
+	Essa idéia de uma sequencia é importante em python e nós vamos aborda-la logo abaixo. 	
+
+- Criando uma String
+	Para criar uma string em python, você precisa usar aspas simples ou aspas duplas. Por exemplo:
+# uma palavra
+‘hello’
+
+# uma frase inteira
+“ isso também é uma string, porem prefiro usar aspas duplas porque em java também se usa aspas duplas. “
+
+	Mas a maneira correta é utilizar o método print()
+Print (“ ola mundo 1 “)
+Print (‘ola mundo 2’)
+Print(‘use \n para inserir uma nova linha’)
+Print (“nova linha”)
+
+	Também podemos usar uma função chamada len() para verificar o comprimento de uma string !
+Len (“ ola mundo”)
+
+#tela
+11
+
+
+
+- indexação em strings
+	Sabemos que as strings são uma sequencia, o que significa que o python pode usar índices para chamar partes da sequencia. Vamos aprender como isso funciona.
+	Em python, usamos colchetes após um objeto para chamar seu índice. Devemos também notar que a indexação começa em 0 para python. Vamos criar um novo objeto chamado “s” e caminhamos através de alguns exemplos de indexação
+#define s como uma string
+S = “hello world”
+Print (s)
+
+	Vamos começar a indexar!
+#mostrar o primeiro elemento (neste caso uma letra)
+S[0]
+“h”
+S[1]
+“e”
+S[2]
+“1”
+	Podemos usar um: para executar corte que pega tudo até um ponto designado. Por exemplo:
+#retorna todos os elementos a partir do elemento de índice 1
+S [1:]
+“ello world”
+
+# observe que não há mudanças no elemento s
+“hello world”
+
+#retorna tudo ate o elemento de índice 3
+S[:3]
+“hel”
+
+	Observe o corte acima. Aqui, estamos dizendo ao python que pegue tudo de 0 a 3. Não inclui o 3º índice. Você notará muito isso em python, onde as declarações são geralmente até o contexto, mas não o incluindo.
+
+#tudo
+S[:]
+“hello world”
+
+	Também podemos usar indexação negativa para retroceder.
+#ultima letra (um índice antes do 0, então ele começa da parte de tras)
+S[-1]
+“d”
+
+# pega tudo menos a ultima letra
+S[:-1]
+“hello worl”
+
+	Também podemos usar notação de índice e fatia para capturar elementos de uma sequencia com espaçamentos ( o espaçamento padrão é 1). Por exemplo, podemos usar dois pontos em uma linha e, em seguida, um numero que especifica a frequência para capturar elementos. Por exemplo:
+# pega tudo, de 1 em 1
+S[::1]
+“hello world”
+
+#pega tudo, mas os espaçamentos são de 2 em 2
+S[::2]
+“hlowrd”
+
+#pega tudo, mas com passos negativos, de tras para frente.
+S[::-1]
+“dlrow olleh
+
+EXERCICIOS:
+1 – imprima a string “hello python” de tras pra frente usando indexação.
+“nohtyp olleh”
+2 – usando a string “hello python” imprima apenas “python”
+“python”
+3 – descubra o comprimento da string “hello python”. Use a função len()
+12
+
+
+                                                                •	STRINGS PARTE 2
+
+- propriedade das strings
+	É importante notar que as strings tem uma propriedade importante conhecida como imutalidade. Isso significa que, uma vez que uma que uma string é criada, os elementos nela não podem ser alterados ou substituídos. Por exemplo:
+S
+S[0] = “x”
+TypeError
+
+	Observe como o erro nos diz diretamente o que não podemos fazer, alterar a atribuição do item!
+	Algo que podemos fazer é concatenar strings!
+S
+“hello world”
+#concatenar as strings
+S + “concatenate me !”
+“hello world concatenate me !”
+
+#assim podemos redefinir completamente s
+S = s+” concatenate me !”
+Print(s)
+“hello world concatenate me!”
+	Podemos usar o símbolo de multiplicação para criar repetições !
+Letter = “z”
+Letter *10
+“zzzzzzzzzz”
+
+ - métodos embutidos em strings
+	Os objetos em python geralmente possuem métodos internos. Esses métodos são funções dentro do objeto que podem executar ações ou comandos no próprio objeto.
+	Chamamos métodos com um ponto e depois o nome do método, os métodos estão na forma: objeto.metodo(parâmetro)
+	Onde os parâmetros são argumentos extras que podemos passar para o método
+Aqui estão alguns exemplos de métodos internos em strings
+S
+“hello world concatenate me !”
+
+#coloca toda string em caixa alta
+s.upper()
+“HELLO WORLD CONCATENATE ME !”
+
+#caixa baixa
+s.lower()
+“hello word concatenate me!”
+
+# divide uma string nos espaços em branco (este é o padrão)
+s.split()
+[“hello”, “world”, “ concatenate”, “me!” ]
+
+#divide em um elemento especifico (não inclui o elemento que foi dividido)
+[“hello”, “orld  concatenate me!” ]
+
+Existem outros métodos do que os abrangidos aqui. Visite a seção de strings avançadas para descobrir mais !
+
+Exercícios
+4 – quebre a string “hello python” em uma lista
+[“hello” , “pyton”]
+5 – imprima a string “hello python” em caixa alta.
+“HELLO PYTHON”
