@@ -1,0 +1,87 @@
+# Dicas-de-Python
+Dicas de programação
+
+•	FOR
+
+	Um loop for atua como um iterador em python, ele passa por itens que estão em uma sequência ou qualquer outro item iterável. Os objetos que aprendemos ate agora que podemos iterar incluem strings, lista, truplas e ate iteráveis embutidos em dicionários, como chaves ou valores.
+
+	Já vimos for um pouco nas seções anteriores, mas agora permitimos formalizar a nossa compreensão.
+	Aqui está o formato geral para um for loop em python:
+
+For item in objeto:
+	Fazer algo
+
+	O nome da variável usado para o item fica a seu critério, você pode escolher o que quiser. Então use seu melhor julgamento para escolher um nome que faça sentido e que você poderá entender ao revisar seu código. Este nome do item pode então ser referenciado dentro do seu loop, por exemplo, se você quisesse usar instruções if para executar verificações.
+	Vamos seguir em frente e trabalhar com vários exemplos de for loops usando uma variedade de tipos de objetos de dados. Vamos começar com um exemplo simples e adicionar mais complexidade ao decorrer da seção.
+
+Exemplos
+L = [1,2,3,4,5,6,7,8,9,10]
+For num in L:
+	Print(num)
+
+	Ótimo espero que isso tenha feito sentido. Agora, vamos adicionar uma instrução if para verificar se há números pares. Vamos utilizar o módulo. 
+
+	Vamos imprimir apenas os números pares dessa lista!
+For num in L:
+	If num % 2 ==0:
+		Print(num)
+
+	Nos também poderíamos usar um else:
+For num in L:
+	If num % 2 ==0:
+		Print (num)
+	Else
+		Print(“numero impar”)
+
+
+	Outra ideia comum durante um for é manter algum tipo de contagem durante os vários loops. Por exemplo, vamos criar um loop for que resume a lista:
+List_sum = 0
+For num in L:
+	List_sum = List_sum + num
+	Print(List_sum)
+
+	Otimo ! leia sobre a célula acima e certifique-se de entender completamente o que está acontecendo. Também poderíamos ter implantado um += para a adição. 
+Por exemplo:
+List_sum = 0
+For num in L:
+	List_sum += num
+	Print(List_sum)
+
+	Nos usamos for com listas e as strings? Lembre-se de que as strings são uma sequencia, então, quando iteramos através delas, estaremos acessando cada item nessa sequencia de caracteres.
+For letter in “this is a strings”:
+	Print(letter)
+
+	
+
+E com as tuplas?
+Tup = (1,2,3,4,5)
+For t in Tup:
+	Print(t)
+
+	As tuplas tem uma qualidade especial quando se trata de fors. Se você está iterando através de uma sequencia que contem tuplas, o item pode realmente ser a própria tupla, este é um exemplo de desembalagem de tuplas. Durante o for, estaremos desembalando a tupla dentro de uma sequencia e podemos acessar os itens individuais dentro dessa tupla!
+L = [(2,4), (6,8), (10,12)]
+For tup in L:
+	Print(tup)
+# agora desembalando
+For (t1, t2) in L:
+	Print(t1)
+
+	Legal !! com as tuplas em uma sequencia, podemos acessar os itens dentro delas por meio de desembalagem ! A  razão pela qual isso importante é porque muitos objetos entregarão seus iteradores através de tuplas. Vamos começar a explorar a iteração através de dicionários para explorar isso ainda mais !!
+D = {“k1”:1 , “k2”:2 , “k3”:3}
+For item in D:
+	Print(item)
+
+	Observe como isso produz apenas chaves. Então, como podemos obter os valores? Ou as chaves e os valores?
+
+	Você deve usar items () para iterar através das chaves e valores de um dicionário. Por exemplo:
+For k, v in D.items():
+	Print(k)
+	Print(v)
+
+	Conclusão a usar for para iterar através de tuplas, listas, strings e dicionários. Será uma ferramenta importante para nós, portanto, certifique-se de conhece-lo bem e compreender os exemplos acima.
+
+Exercícios
+
+1 – dada a lista: L = [1,4,5,67,7,8,6,54,4,3,1,21,1,9,0] imprima apenas os números pares.
+
+2 – usando a string “hello puthon”, imprima letra apenas a palavra “python”
