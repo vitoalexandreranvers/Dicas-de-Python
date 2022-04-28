@@ -1,0 +1,106 @@
+# Dicas-de-Python
+Dicas de programação
+
+•	OPERADORES DE COMPARAÇÃO     
+
+
+- operadores de comparação
+	Nesta seção estaremos aprendendo sobre operadores de comparação em python. Esses operadores nos permitirão comparar variáveis e produzir um valor booleano (verdadeiro ou falso)
+	Se você tiver alguma base em matemática, esses operadores devem ser muito diretos
+	Em primeiro lugar, apresentaremos uma tabela dos operadores de comparação e depois trabalharemos com alguns exemplos:
+
+Tabela de operadores de comparação
+OPERADOR	DESCRIÇÃO	EXEMPLO
+==	Se os valores de dois operandos forem iguais, a condição torna-se verdadeira	(a==b) não é verdade.
+!=	Se valores de dois operandos não forem iguais, a condição torna-se verdadeira	(a != b) é verdadeiro
+>	se o valor do operando esquerdo for maior que o valor do operando direito, a condição torna-se verdadeira	(a>b) não é verdadeiro
+<	Se o valor do operando esquerdo for inferior ao valor do operando direito, a condição torna-se verdadeira	(a<b) é verdadeiro
+>=	Se o valor do operando esquerdo for maior ou igual ao valor do operando direito, a condição torna-se verdadeira	(a>=) não é verdadeiro
+<=	Se o valor do operando esquerdo for menor ou igual ao valor do operando direito, a condição torna-se verdadeira	(a<=b) é verdadeiro
+
+Vamos agora ver alguns exemplos rápidos de cada um desses.
+
+Igualdade
+ 2 ==2
+True
+
+1==0
+False
+
+
+
+
+
+
+Desigualdade
+2!=1
+True
+
+2!=2
+false
+
+maior que 
+2 >1
+True
+
+2>4
+False
+
+Menor que 
+2<4
+True
+
+2<1
+False
+
+Maior ou igual que
+2>=2
+True
+
+2>=1
+False
+
+Menor ou igual que
+2<=2
+True
+
+2<=4
+False
+
+- operadores de comparação em cadeia
+	Uma característica interessante do python é a capacidade de encadear comparações múltiplas para realizar um teste mais complexo. Você pode usar essas comparações em cadeia como uma abreviatura para expressões booleanas maiores.
+	Agora, aprendemos como encadear operadores de comparação e também apresentamos duas outras declarações importantes em python: and e or
+
+Vejamos alguns exemplos de uso de cadeias:
+1<2<3
+True
+
+
+
+A declaração acima verifica se 1 era inferior a 2 e se2 era inferior a 3. Poderíamos ter escrito isso usando a instrução and em python.
+1<2 and 2<3
+True
+
+1<3 >2
+True
+As verificações acima se 3 e maior do que os outros números. Você pode usar and para reescreve-lo como:
+1<3 and 3>2
+True
+
+É importante notar que python está verificando ambas as instancias das comparações. Nos tambem
+1==2 or 2<3
+True
+
+Observe como a expressão retornou true porque com o operador or precisamos apenas que um dos dois sejam verdadeiros. Outros exemplo:
+1==1 or 100 ==1
+True
+
+Ótimo agora você já sabe como usar operadores de comparação em python
+
+Exercícios:
+1 – qual será o booleano resultante dos seguintes códigos?
+2>3
+3<=2
+3==2.0
+3.0 ==3
+4==0.5 !=2
