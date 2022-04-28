@@ -1,0 +1,152 @@
+# Dicas-de-Python
+Dicas de programação
+                                                                      •	LISTAS – PARTE 1
+
+Na seção strings, introduzimos o conceito de sequencia em python. As listas podem ser pensadas na versão mais geral de uma sequencia em python. Ao contrário das strings, elas são mutáveis, o que significa que os elementos dentro de uma lista podem ser alterados !
+Neta seção, aprenderemos sobre:
+1 – criação de listas
+2 – índice e cortes de listas
+3 – métodos básicos da lista
+4 – listas aninhadas
+
+As listas são construídas com colchetes e virgulas que separam casa elemento da lista.
+
+Vamos avançar e ver como podemos construir listas !
+
+#Atribui uma lista a uma variável chamada my_list
+my_list = [1,2,3]
+
+Acabamos de criar uma lista de números inteiros, mas as listas podem realmente armazenar diferentes tipos de objetos. Por exemplo:
+
+my_list = [“string” , 23, 100.232, “list”]
+
+Assim como strings, a função len() irá dizer quantos itens estão na sequencia da lista.
+
+len(my_list)
+4
+
+- indexação e corte
+	Indexar r cortar funciona exatamente como em strings. Vamos fazer uma nova lista para nos lembrar de como isso funciona:
+my_list =[“one”, “two”,  “three”, 4, 5]
+
+#pega o elemento de índice 0
+“one”
+
+# pega o índice 1 e tudo depois
+my_list[1:] 
+[ “two”,  “three”, 4, 5]
+
+# pega tudo até o elemento de índice 3
+my_list[:3]
+[“one”, “two”, “three”]
+
+Nos também podemos usar + para concatenar listas, assim como fizemos com strings
+my_list + [“new item”]
+[“one”, “two”, “three”,  4, 5, “new item”]
+Nota: isso realmente não altera a lsita original !!
+
+my_list 
+[“one”, “two”, “three”, 4 ,5]
+Você teria que reatribuir a lista para tornar a mudança permanente.
+
+#reatribuição
+my_list = my_list + [“add new item permanently”]
+my_list
+[“one”, “two”, “three”,  4, 5, “add new item permanently”]
+
+Nos também podemos usar o * para um método de duplicação semelhante as strings:
+#dobrar a lista
+my_list * 2
+[“one”, 
+“two”,
+ “three”, 
+ 4,
+ 5,
+ “add new item permanently”, 
+“one”, 
+“two”,
+ “three”, 
+ 4,
+ 5,
+ “add new item permanently”]
+
+
+my_list
+[“one”, “two”, “three”,  4, 5, “add new item permanently”]
+
+
+Exercicios:
+1 – dada a lista abaixo.
+Lst = [1,2[3,4],[5[100,200,[“ola”]], 23,11],1,7]
+Use a indexação para obter apenas a string “ola”.
+
+
+                                                                •	LISTA – PARTE 2
+
+- Metodos Básicos De Lista
+	se você está familiarizado com outra linguagem de programação, você pode começar a comparar os arrays dessa linguagem com listas em python. As listas em python, no entanto, tendem a ser mais flexíveis do que arrays em outras linguagens por dois bons motivos: elas não tem tamanho fixo ( o que significa que não precisamos especificar o tamanho de uma lista), e elas não tem restrição de tipo fixo (como já vimos acima).
+
+	Vamos prosseguir e explorar alguns métodos mais espaciais para listas:
+#cria a lista
+1 = [1,2,3]
+
+Use o método append() para adicionar permanentemente um item ao final de uma lista:
+#acrescentar
+l.append(“append me !)
+
+Use pop() para “retirar” um item da lista. Por padrão, pop tira o ultimo índice, mas também pode-se especificar qual índice ira retirar. Vamos ver um exemplo:
+#retira o item de índice 0 permanentemente
+l.pop(0)
+
+#atribui o elemento retirado, lembre-se de que o índice padrão é -1
+Popped_item = l.pop()
+	Tambem deve notar-se que a indexação das listas retornará um erro se não houver nenhum elemento nesse índice. Por exemplo:
+l[100]
+indexerror: list index out of range
+
+Podemos usar os métodos sort() e reverse() para alterar as listas
+new_list = [“a”, “e”, “x”, “b”, “c”]
+#mostra
+[“a”, “e”, “x”, “b”, “c”]
+
+# Use o reverse() para reverter a ordem (isto é permanente !)
+new_list.reverse()
+#mostrar
+[“c”, “b”, “x”, “e”, “a”]
+
+#Use sort()  para classificar a lista (neste caso, ordem alfabética)
+new_list.sort()
+#mostrar
+[“a”, “b”, “c”, “e”, “x”]
+
+- listas aninhadas
+	Uma ótima caracteristic das estruturas de dados do python é que elas suportam aninhamento. Isso significa que podemos ter estruturas de dados dentro das estruturas de dados. Por exemplo: uma lista dentro de uma lista.
+	Vamos ver como isso funciona!
+
+#Começamos com 3 listas
+lst_1 = [1,2,3]
+lst_2 = [4,5,6]
+lst_3 = [7,8,9]
+
+#faça uma letra de lista para formar uma matriz
+Matrix = [lst_1 , lst_2, lst_3]
+#mostra
+matrix
+[[1,2,3], [4,5,6], [7,8,9]]
+
+Agora, podemos usar novamente a indexação para pegar elementos, mas agora existem dois níveis para o índice. Os itens no objeto matriz e , em seguida, os itens dentro dessa lista !
+
+# pega o primeiro item no objeto da matriz
+Matrix[0]
+[1,2,3]
+
+#pega o primeiro item do primeiro item do objeto de matriz
+Matrix[0][0]
+[1]
+
+Para obter métodos e recursos mais avançados das listas em python, consulte a seção de listas avançadas !!
+
+Exercícios:
+2 – ordene a lista:
+l = [5,3,4,6,1]
+
