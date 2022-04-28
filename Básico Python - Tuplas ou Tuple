@@ -1,0 +1,64 @@
+# Dicas-de-Python
+Dicas de programação
+•	TUPLAS              
+
+-Tuplas
+	Em python, as tuplas são muito semelhantes as listas, no entanto, ao contrario das listas, elas são imutáveis , o que significa que elas não podem ser alteradas. Você usaria tuplas para apresentar coisas que não deveriam ser alteradas, como dias da semana ou datas em um calendário.
+	Você terá uma intuição de como usar tupla com base no que você sabe sobre as listas. Nos podemos trata-las de forma muito semelhantes, com a maior distinção é que as tuplas são imutáveis.
+
+- construindo tuplas
+	A construção de tuplas usa() com elementos separados por virgulas. Por exemplo:
+#pode-se criar uma tupla com múltiplos elementos
+t=(1,2,3)
+
+#metodo len() funciona também para tuplas
+Len(t)
+#aparece na tela
+3
+
+
+#voce também pode variar os tipos de dados
+t=(“one” , 2)
+#mostra na tela
+(“one , 2)
+
+#E a indexação funciona exatamente como a listas
+t[0]
+#mostra na tela
+“one”
+
+#corte de dados tamem...
+t[-1]
+#mostra na tela
+2
+
+-Metodos básicos da tupla
+	As tuplas tem métodos internos, mas não tantos quanto as listas. Vamos ver dois deles:
+#use .index() com o valor de parâmetro para retornar o índice do mesmo
+t.index(“one”)
+#mostra na tela
+0
+
+#use .count() para saber quantas vezes determinado elemento apareceu na tupla
+t.count(“one”)
+#mostra na tela
+1
+
+- Imutabilidade
+	Como mencionamos anteriormente, tuplas são imutáveis
+	Por causa dessa imutabilidade, as tuplas não podem crescer. Uma vez que uma tupla é feita, não podemos adicionar novos elementos a ela.
+
+- Quando usar tuplas
+	Você pode estar se perguntando “por que se preocupar em usar tuplas quando elas tem menos métodos disponíveis?” para ser honesto, as tuplas não são usadas tantas vezes como listas na programação, mas são usadas quando a imutabilidade é necessária. Se no seu programa você está passando por um objeto e precisa ter certeza e que ele não seja alterado, então a tupla se tornará sua solução. Ela fornece uma fonte conveniente de integridade de dados.
+	
+	Agora você pode criar e usar suas tuplas em sua programação, bem como ter uma compreensão da sua imutabilidade.
+
+
+
+
+
+Exercicios:
+
+1 – dada a lista:
+l = [1,2,6,9,8,1]
+converta a lista para uma tupla. Use a função .tuple()
