@@ -1,0 +1,39 @@
+# Dicas-de-Python
+Dicas de programação
+•	SETS
+
+- Sets
+	Os conjuntos (sets) são uma coleção não ordenada de elementos únicos. Podemos construí-los usando a função set() vamos fazer um conjunto para ver como funciona
+
+x = set()
+#adiciona elementos com o método add()
+x.add(1)
+#mostra na tela
+{1}
+
+	Observe os colchetes. Isso não indica um dicionário! Embora você possa montar analogias como um set sendo um dicionário com apenas chaves. Sabemos que um conjunto tem apenas entradas únicas. Então, o que acontece quando tentamos adicionar algo que já está em um conjunto?
+# adiciona um elemento novo
+x.add(2)
+#mostra na tela
+{1,2}
+
+# Adicionar o mesmo elemento 
+x.add(1)
+#mostra na tela
+{1,2}
+
+	Observe como ele não colocará mais1 la. Isso porque um conjunto apenas se ocupa de elementos exclusivos! Podemos transformar uma lista com múltiplos elementos repetidos para um conjunto para obter os elementos exclusivos. Por exemplo:
+
+#Criar uma lista com elementos repetidos
+L = [1,1,2,2,3,4,5,6,1,1]
+#transforma em um set com elementos únicos
+Set(1)
+{1,2,3,4,5,6}
+
+	Agora você já sabe como usar sets em seu código, lembre-se de usá-los quando você precisar de elementos não repetidos.
+
+
+
+Exercícios:
+1 – use um set para encontrar os valores exclusivos da lista abaixo:
+L = [1,2,2,33,4,4,11,22,3,]
