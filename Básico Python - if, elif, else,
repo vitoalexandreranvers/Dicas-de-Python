@@ -1,0 +1,79 @@
+# Dicas-de-Python
+Dicas de programação
+
+•	IF, ELIF, ELSE
+
+
+	If em python nos permite contar ao computador para executar ações alternativas com base em um determinado conjunto de resultados. Verbalmente, podemos imaginar que estamos informando o computador:
+	“se isso caso acontecer, execute alguma ação” podemos então expandir a ideia com declarações elif e else, o que nos permite contar ao computador:
+	
+	“se esse caso acontecer, execute alguma ação. Caso contrário, se aquilo acontecer, execute alguma outra ação. Caso contrário, se nenhum dos casos acima aconteceu, execute esta ação” vamos avançar e ver o formato de sintaxe para as instruções if para ter uma ideia melhor disso:
+
+
+	If case 1:
+		Executar ação 1
+	Elif case 2
+		Execute ação 2
+	Else
+		Execute ação 3
+
+Exemplos:
+	Vamos ver um exemplo rápido disso:
+
+If true:
+	Print(“it was true !”)
+
+
+	Vamos adicionar outra logica:
+
+X = false
+If x:
+	Print(“x was true !”)
+Else
+	Print(“i will be printed in any case where x is not true”)
+
+
+- Múltiplos ramos
+	Vamos ver de forma mais completa de quão longe if,elif e else podem nos levar ! nos escrevemos isso em uma escritura aninhada. Tome nota de como o if, elif e else se alinham no código. Isso pode ajuda-lo a ver o que se relaciona com o elif ou outras afirmações.
+
+	Vamos reintroduzir uma sintaxe de comparação para python.
+
+Loc = “bank”
+
+If loc == “auto shop”:
+	Print(“welcome to the auto shop !”)
+Elif loc == “bank”:
+	Print(“welcome to the bank !”)
+Else:
+	Print(“where are you? “)
+
+	Observe como as declarações if aninhadas são verificadas ate que um boleano true faça com que o código aninhado abaixo seja executado. Você também deve notar que você pode colocar as declarações elif quanto desejar antes de fechar com outras.
+
+
+
+
+
+
+	Vamos criar dois exemplos mais simples para as informações if, elif e else:
+1ex
+Person = “samy” 
+If person ==”samy”:
+	Print(“welcome samy !”)
+Else:
+	Print(“welcome, what´s your name ?”)
+2ex
+Person = “george”
+If person == “samy”:
+	Print(“ welcome samy”)
+Elif person == “george”:
+	Print(“ welcome george “)
+Else:
+	Print(“welcome, what´s your name ?”)
+
+Agora você já sabe como criar estruturas de decisão no seu código, isso será muito útil para quando o programa deve se comportar de determinada forma dependendo da situação.
+
+Exercícios:
+1 – escreva um programa que identifique se um triangulo é valido ou não. Para um triangulo ser válido a soma de um de seus dois lados tem que ser sempre maior ou igual ao terceiro lado, caso não seja, o triangulo é invalido.
+
+A=3 , B=6 , C=9
+TRIANGULO VALIDO
