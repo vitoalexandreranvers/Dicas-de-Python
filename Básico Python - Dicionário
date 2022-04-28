@@ -1,0 +1,98 @@
+# Dicas-de-Python
+Dicas de programação
+
+•	DICIONÁRIO                                   
+- Dicionários
+	Nas seções anteriores temos aprendido sobre sequencias em python, mas agora vamos mudar de engrenagem e aprender sobre mapeamento em python. Se você está familiarizado com outras linguagens, pode pensar nestes dicionários como tabelas de hash.
+	Então, o que são os mapeamentos? Os mapeamentos são uma coleção de objetos que são armazenados por uma chave, ao contrario de uma sequencia que armazena objetos por sua posição relativa. Esta é uma distinção importante, uma vez que os mapeamentos não reterão a ordem, pois possuem objetos definidos por uma chave.
+	Um dicionário de python consiste em uma chave e depois em um valor associado. Esse valor pode ser quase qualquer objeto python.
+
+- Construindo um dicionário
+	Vamos ver como podemos construir dicionários para obter uma melhor compreensão de como eles funcionam!!
+
+#Criar um dicionário com {} e : que significa uma chave e um valor
+my_dict = {“key1 : “value1” , “key2” : “value2”}
+#chamando valores pela chave
+my_dict = [ “key2”]
+
+	É importante notar que os dicionários são muitos flexíveis com relação aos tipos de dados que eles podem conter, por exemplo:
+my_dict = {“key1 :123 , “key2” :[12,23,33] , “key3”: [“item0”, “item1”, “item2”]}
+#vamos chamar itens do dicionário
+my_dict = [“key3”]
+#aparece na tela
+[“item0”, “item1”, “item2”]
+
+#podemos chamar itens de uma lista presente na posição referente á chave “key3”
+ my_dict = [“key3”] [0]
+#aparece na tela
+“item0”
+
+#podemos chamar métodos nos itens também
+my_dict = [“key3”] [0].upper()
+#aparece na tela o item todo em maiúsculo
+“ITEM0”
+
+	
+Podemos também alterar valores através da chave.
+my_dict = [“key1”]
+#aparece na tela
+123
+my_dict = [“key1”] = my_dict  [“key1”] -123
+my_dict = [“key1”]
+#aparece na tela
+0
+
+	Uma nota rápida: o python possui um método interno de fazer uma subtração ou adição automática (ou multiplicação ou divisão). Poderíamos ter usado += ou -= para a atribuição. Por exemplo:
+#define o objeto como sando ele mesmo menos 123
+my_dict = [“key1”] -=123
+my_dict = [“key1”]
+#aparece na tela
+-123
+
+	Também podemos criar chaves por atribuição. Por exemplo, se começássemos com um dicionário vazio, poderíamos adicionar-lhe continuamente:
+#cria um novo dicionário
+d={}
+#cria uma chave por associação
+d [“animal1”] = “dog”
+#pode fazer isso com qualquer objeto
+d [“answer”] = “42”
+#mostra na tela
+d
+{“animal1” : “dog”, “answer”,  42}
+
+- Aninhamento de dicionários
+	Espero que você esteja começando a ver o quão poderoso python é com sua flexibilidade de objetos de nidificação e métodos. Vamos ver um dicionário aninhado dentro de um dicionário:
+d ={“key1” : {nestkey” : {“subnestkey” : “value”}}}
+#continue chamando as chaves...
+d [“key1” ][“nestkey”][“subnestkey”]
+#aparece na tela
+“value”
+
+-Alguns métodos de dicionários
+	Existem alguns métodos que podemos chamar em um dicionário. Vamos começar uma breve introdução a alguns deles:
+#cria um dicionário típico
+d ={“key1”: 1, “key2”: 2, “key3”:3}
+
+
+
+#retorna uma lista de todas as chaves
+d.keys()
+#aparece na tela
+[“key3”, “key2”, “key1”]
+
+#pegar todos os valores
+d.values()
+#aparece na tela
+[3, 2, 1]
+
+#metodo para retornar as tuplas de todos os itens
+d.items()
+[(“key3”,3), ( “key2”,2), ( “key1”,1)]
+
+	Espero que você tenha agora um bom entendimento básico para a construção de dicionários. Há muito mais para explorar aqui. Depois desta seção, tudo o que você precisa saber é como criar um dicionário e como recuperar seus valores.
+
+Exercicos:
+1 – usando chaves e indexação, pegue o “hello” dos seguintes dicionários:
+d={“simple_key” : “hello”}
+d={“k1“: {“k2”: “hello”}}
+d={“k1” : [{“nest_key” : [“this is deep”, [“hello”]]}]}
