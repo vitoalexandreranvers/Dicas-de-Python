@@ -1,0 +1,203 @@
+# Dicas-de-Python
+Dicas de programação
+
+
+•	PROGRAMAÇÃO ORIENTADA A OBJETO
+
+	A programação orientada a objeto (POO) tende a ser um dos principais obstáculos para iniciantes quando começam a aprender python.
+	Para esta seção vamos construir nosso conhecimento de POO em python, abordando os seguintes tópicos:
+
+•	Objetos
+•	Usando a palavra-chave class
+•	Criando atributos de classe
+•	Criando métodos em uma classe
+•	Herança
+•	Métodos especiais para classes
+
+	Vamos começar lembrando sobre os objetos básicos do python. Por exemplo:
+L = [1,2,3]
+
+Lembre-se de como podemos chamar métodos em uma lista?
+L.count(2)
+
+	O que vamos fazer basicamente é explorar como podemos criar um tipo de objeto como uma lista. Já aprendemos sobre como criar funções. Então, vamos explorar objetos em geral.
+
+-OBJETOS
+	Em python, tudo é um objeto. Podemos usar a função type() para verificar o tipo do objeto:
+Print(type(1))
+Print(type([]))
+Print(type(()))
+Print(type({}))
+
+	Então sabemos que em python tudo é um objeto, então, como podemos criar nosso próprio tipo de objetos? É ai que entra a palavra-chave class.
+
+-CLASS
+	A classe é um modelo que define a natureza de um objeto. Das classes podemos construir instância. Uma instância é um objeto especifico criado a partir de uma determinada classe. Por exemplo, acima, criamos o objeto “I” que era uma instância de um objeto da classe lista.
+
+Vamos ver como podemos usar a palavra-chave class:
+
+#cria um novo tipo de objeto chamado exemplo
+Class exemplo(object):
+     Pass
+
+# instanciando exemplo
+X = exemplo()
+Print(type(X))
+
+	Por convenção damos as classes um nome que começa com uma letra maiúscula. Observe como x é agora referencia para nossa nova instancia de classe exemplo. Em outras palavras, nós instanciamos a classe exemplo.
+
+	Dentro da classe temos apenas um pass( que é usado quando queremos que algo não faça nada). Mas podemos definir atributos e métodos para a classe.
+	Um atributo é uma característica de um objeto. Um método é uma operação que podemos realizar com o objeto.
+	Por exemplo, podemos criar uma classe chamada Dog. Um atributo de Dog pode ser sua raça ou seu nome, enquanto um método para Dog pode ser algo como latir() que retorna um som.
+
+	Vamos ter uma melhor compreensão dos atributos através de um exemplo.
+
+ - ATRIBUTOS
+	A sintaxe para criar um atributo é:
+
+	self.attribute = something
+
+existe um método especial chamado: _init_()
+
+esse método é usado para inicializar os atributos de um objeto. Por exemplo
+class Dog(object):
+   def __init__(self, breed):
+         self.breed = breed
+
+sam = Dog(breed = ‘Lab’)
+frank = Dog(breed = ‘huskle’)
+
+	vamos descrever o que temos acima. O método especial __init__() é chamado automaticamente logo após o objeto ter sido criado:
+def __init__(self,breed): cada atributo em uma definição de classe começa com uma referencia ao objeto de instancia. É convencionalmente chamado de self(semelhante ao “this” em outras linguagens). Breed é o argumento. O valor é passado durante a instanciação da classe.
+
+	Agora criamos duas instancias da classe Dog. Com dois tipos de raças, podemos acessar estes atributos assim:
+Sam.breed
+
+Frank.breed
+
+	Observe como não temos parênteses após breed, isto é porque é um atributo e não leva nenhum argumento.
+	Em python também existem atributos de objeto de classe. Esse atributos são os mesmos para qualquer instancia da classe. Por exemplo, podemos criar o atributo espécie para a classe Dog. Os cães independentemente da sua raça, nome ou outros atributos serão sempre mamíferos. Aplicamos essa lógica da seguinte maneira:
+
+Class Dog(object):
+
+# Atributos da classe
+ Species = ‘mammal’
+
+Def __init__(self,breed,name):
+     Self.breed = breed
+     Self.name = name
+
+Sam = dog(‘Lab’ , ‘Sam’)
+Sam.name
+
+	Observe que o atributo da classe foi definido fora de qualquer método na classe. Também por convenção, nos os colocamos antes do __init__()
+Sam.species
+
+METODOS
+	Métodos são funções definidas dentro do corpo de uma classe. Eles são usados para executar operações com os atributos de nosso objetos. Os métodos são essenciais no conceito de encapsulamento em POO. Isso é essencial para dividir as responsabilidades na programação, especialmente em grandes aplicações.
+	Você pode basicamente pensar em métodos como funções que atuam em um objeto que levam o próprio objeto através de seu argumento self.
+	Vamos passar por um exemplo de criação de uma classe Circle:
+
+Class Circle(object):
+   Pi = 3.14
+
+#o circulo é instanciado com um raio (o padrão é 1)
+   Def __init__(self, radius =1):
+   Self.radius = radius
+
+# método de calculo da área. Observe o uso de self
+   Def área(self):
+        Return self.radius * self.radius = Circle.pi
+
+# método que redefine o raio
+    Def setRadius(self, radius):
+         Self.radius = radius	
+
+# metodo para obter raio
+   Def getRadius(self):
+      Return self.radius
+
+C = Cicle()
+c.setRadius(2)
+print(´O raio é : ‘ , c.getRadius())
+print(‘ A área é : ‘ , c.area())
+
+	Ótimo observe como nós usamos a notação self para atributos de referencia da classe dentro dos métodos.
+
+HERANÇA
+	A herança é uma forma de formar novas classes usando classes que já foram definidas. As classes recém formadas são chamadas classes derivadas, as classes de que derivamos são chamadas de classes base. Os benefícios importantes da herança são a reutilização de códigos e a redução da complexidade de um programa. As classes derivadas (descendentes) substituem ou estendem a funcionalidade das classes base (ancestrais).
+
+	Vejamos um exemplo incorporando nosso trabalho anterior na classe Dog:
+Class Animal(object):
+    Def __int__(self):
+       Print(‘ Animal created ‘)
+    
+   Def whoAmI(self):
+            Print(‘Animal’)
+
+   Def eat(self):
+            Print(‘eating’)
+
+  Class Dog(Animal):
+      Def  __init__(self):
+       Animal.__init__(self)
+       Print(‘Dog created”)        
+
+     
+Def whoAmI(self):
+Print(‘Dog’)
+
+Def bark(self):
+    Print(‘woof !’)
+
+D = Dog()
+
+d.whoAmI()
+
+d.eat()
+
+d.bark()
+
+	Neste exemplo, temos duas classes: Animal e Dog. O animal é a classe base, o cão é a classe derivada.
+	A classe derivada herda a funcionalidade da classe base.
+•	É mostrado pelo método whoAmI(). A classe derivada modifica o comportamento existente da classe base.
+•	É mostrado pelo método eat() finalmente, a classe derivada estende a funcionalidade da classe base, e também define um novo método bark().
+
+METODOS ESPECIAIS
+	Finalmente, vamos dar uma olhada em métodos especiais. Classes em python podem implementar determinadas operações com nomes de métodos especiais.
+	Esses métodos não são realmente chamados diretamente, mas pela sintaxe de linguagem especifica do python. Por exemplo, vamos criar uma classe Book:
+
+Class Book(object):
+       Def __init__(self, title, author, pages):
+           Print(‘A book is created ‘ )
+             Self.title = title
+             Self.author = author
+             Self.pages = pages
+
+        Def __str__(self):
+            Return ‘title:% , author:%s, pages:%s ‘ %(self.title, self.author, self.pages)
+
+      Def __len__(self):
+           Return self.pages
+
+      Def __del__(self):
+            Print(‘ A Book was destroyed ‘ )
+
+Book = Book(‘ python rocks !’ , ‘ rodrido tadewald’, 159)
+
+
+
+#metodos especiais
+Print(book)
+Print(len(book))
+Del book
+
+	Os métodos init(), len() e del() são definidos pelos uso de sublinhados. Eles nos permitem usar funções especificas do python em objetos criados através da nossa classe.
+	Ótimo ! após esta seção, você deve ter uma compreensão básica de como criar seus próprios objetos com classe em python.
+
+Exercico
+1 – crie uma classe para cubos. Essa classe terá os métodos para achar a área e o volume do cubo, o tamanho da aresta do cubo será passado por parâmetro na criação do objeto.
+#exemplo
+C = cube(4)
+Print(‘area : ‘ , c.area())
+Print(‘volume’ , c.volume())
