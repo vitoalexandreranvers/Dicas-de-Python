@@ -1,0 +1,33 @@
+# Dicas-de-Python
+Dicas de programação
+
+
+•	MODULOS E PACOTES
+
+	Os módulos no python são simplesmente arquivos python com a extensão .py, que implementam um conjunto de funções.
+	Para importar um modulo, usamos o comando import. A primeira vez que um modulo é carregado em um script python em execução, ele é inicializado executado o código do modulo.
+	Se quisermos importar o modulo de matemática do python, simplesmente importamos;
+
+# importa a biblioteca
+Import math
+
+#arredondar número
+Math.ceil(2.4)
+
+EXPLORANDO MODULOS EMBUTIDOS
+	Duas funções muito importantes são uteis quando se exploram módulos no python – as funções dir() e help()
+	Podemos procurar quais funções são implementadas em cada modulo usando a função dir()
+Print(dir(math))
+
+	Quando encontrarmos a função no modulo que queremos usar, podemos ler mais sobre isso usando a função help(), dentro do interpretador python:
+
+Help(math.ceil))
+
+
+ESCREVENDO MODULOS
+	Escrever módulos em python é muito simples. Para criar um modulo por conta própria, basta criar um novo arquivo .py com o nome do modulo e , em seguida, importa-lo usando o nome do arquivo python (sem a extensão .py) usando o comando import.
+
+Exercícios
+1 – importe a biblioteca math e descubra o logaritmo de 12 na base 10. Use log10()
+
+2 – importe a biblioteca math e descubra o valor da raiz quadrada de pi. Use math.sqrt() e math.pi
