@@ -1,0 +1,110 @@
+# Dicas-de-Python
+Dicas de programação
+
+
+•	WHILE
+
+A instrução while em python é uma das formas mais gerais de executar iterações. Uma instrução while executara repetidamente uma única declaração ou grupo de instruções, desde que a condição seja verdadeira. A razão pela qual é chamado de “loop” é porque as instruções de código são rodadas repetidamente ate que a condição não seja mais atendida.
+
+	O formato geral de um loop while é :
+While teste:
+   Declaração de código
+Else:
+    Declaração de código final
+
+	Vamos ver alguns simples exemplos do while em ação
+
+X = 0
+While x < 10:
+	Print(‘x is currently: ‘ , x)
+	Print(‘ x is still less than 10 , adding 1 to x’)
+X +=1
+
+	Observe quantas vezes as declarações de impressão ocorreram e como o while continuou ate a condição true deixasse de ser verdadeira, que ocorreu quando o x passou a ser 10. É importante notar que, uma vez que isso ocorreu, o código parou. Vamos ver como podemos adicionar uma outra afirmação:
+X = 0
+While x < 10:
+	Print(‘x is currently: ‘ , x)
+	Print(‘ x is still less than 10, adding 1 to x’)
+X += 1
+
+	Observe quantas vezes as declarações de impressão ocorreram e como o while continuou até a condição true deixasse de ser verdadeira, que ocorreu quando x passou a ser 10. É importante notar que , uma vez que isso ocorreu, o código parou. Vamos ver como podemos adicionar uma outra afirmação:
+
+X = 0
+While x < 10:
+	Print(‘x is currently: ‘ , x)
+	Print(‘ x is still less than 10, adding 1 to x’)
+X += 1
+Else:
+	Print(“all done !”)
+
+- Break, continue, pass
+	Podemos usar as declarações break, continue e pass em nossos loops para adicionar funcionalidades adicionais para vários casos. As três declarações são definidas por:
+
+Break: para o loop
+Continue: vai para o próximo loop
+Pass: não faz nada
+
+Pensando nas declarações break e continue, o formato geral do loop while se parece com isto:
+
+While test:
+    Código
+If test:
+      Break
+Else
+       Continue
+
+Vamos ver alguns exemplos!!
+X = 0
+While x <10:
+	Print(‘x is currently : ‘ , x)
+	Print(‘ x is still less than 10, adding 1 to x’)
+X +=1
+If x == 3:
+     	Print(‘x ==3’ )
+Else:
+	Print(‘continuing ...’)
+	Continue
+
+observe como temos uma declaração impressa quando x== 3 e continuamos imprimindo enquanto continuamos através do whilw. Vamos fazer uma pausa uma vez que x ==3 e ver se o resultado faz sentido:
+
+X = 0
+While x <10:
+	Print(‘x is currently : ‘ , x)
+	Print(‘ x is still less than 10, adding 1 to x’)
+X +=1
+If x == 3:
+     	Print(‘breaking because x == 3’ )
+	break	
+Else:
+	Print(‘continuing ...’)
+	Continue
+
+Observe como a declaração else não foi alcançada e a continuação nunca foi impressa ! após esses exemplos breves e simples, você deve se sentir confortável ao usar as instruções em seu código.
+
+Uma observação importante !! é possível criar um ciclo de execução infinita com instruções while. Por exemplo:
+
+#nao rode este código:
+While true:
+        Print(‘uh oh infinite loop !!’)
+
+Exercício
+1 – usando while, escreva um programa que imprima esse desenho:
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * *
+* * *
+* *
+*
