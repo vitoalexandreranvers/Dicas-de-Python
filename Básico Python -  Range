@@ -1,0 +1,33 @@
+# Dicas-de-Python
+Dicas de programação
+
+
+•	RANGE 
+
+	Nesta seção estaremos discutindo a função range(). Vamos conhecer esta simples função( mas extremamente útil).
+	Range() nos permite criar uma sequencia de números que variam de um ponto de partida ate um ponto final. Também podemos especificar o tamanho do passo. Vamos percorrer alguns exemplos:
+
+Range(0,10)
+
+	
+
+
+
+Perceba como a função não produziu a lista, isso acontece porque devemos informar ao python que queremos que o range() seja convertido para uma lista. Podemos usar a função list() para fazer isso, vamos tentar de novo mas agora usando essa função:
+
+List(range(0,10))
+
+Vamos tentar outro exemplo:
+r= range (0, 20 , 2)
+#mostrar
+List( r )
+
+Outra grande vantagem do range() é que podemos iterar sobre ele em um for.
+For i in range(0,10):
+	Print(i)
+
+
+	Impressionante, não é? Esses são apenas alguns exemplos do que podemos fazer com o range().
+
+Exercício
+1 – escreva um programa que imprima os números inteiros de 1 a 50. Para múltiplos de três imprima “fiz” na frente do número, e para os múltiplos de cinco imprima “Buzz”. Para números que são múltiplos de três e cinco imprima “FizzBuzz”.
